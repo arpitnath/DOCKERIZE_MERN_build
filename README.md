@@ -1,4 +1,3 @@
-# MERN - imgur_clone
 
 > Learning Dockerize a MERN build 
 

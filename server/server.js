@@ -17,9 +17,13 @@ server.use(bodyParser.json());
 server.use(cors());
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true }, () => {
-	console.log('connected to DB');
-});
+mongoose.connect(
+	'mongodb://mongo:27017/items',
+	{ useNewUrlParser: true },
+	() => {
+		console.log('connected to DB');
+	}
+);
 
 server.use((req, res, next) => {
 	res.header('Access-Control-Allow-Origin', '*');
